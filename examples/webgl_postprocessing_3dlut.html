@@ -34,7 +34,7 @@
 				enabled: true,
 				lut: 'Bourbon 64.CUBE',
 				intensity: 1,
-				use2dLut: false,
+				use2DLut: false,
 			};
 
 			const lutMap = {
@@ -137,7 +137,8 @@
 
 				if ( renderer.capabilities.isWebGL2 ) {
 
-					gui.add( params, 'use2dLut' );
+					gui.add( params, 'use2DLut' );
+					params.use2DLut = false;
 
 				} else {
 
@@ -161,7 +162,6 @@
 
 			}
 
-			//
 
 			function render() {
 
